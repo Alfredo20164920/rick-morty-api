@@ -6,7 +6,7 @@ import resolveRoutes from "../utils/resolveRoutes";
 import getHash from "../utils/getHash";
 
 const routes = {
-    "/": Home,
+    "/": await Home,
     "/:id": Character,
 }
 
@@ -20,9 +20,8 @@ const router = async() => {
 
     let hash = getHash();
     let route = await resolveRoutes(hash);
-    console.log(hash);
     let render = routes[route] ? routes[route] : Error404;
-    content.innerHTML = render();
+    content.innerHTML = await render();
 }
 
 
