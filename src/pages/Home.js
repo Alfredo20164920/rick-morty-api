@@ -2,7 +2,7 @@ const Home = () => {
     const view = /*html*/`
         <div class="Characters">
             <article class="Character-item">
-                <a href="id/1">
+                <a href="#/1">
                     <img src="image" alt="name" />
                     <h2>Name</h2>
                 </a>

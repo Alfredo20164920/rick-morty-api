@@ -8,11 +8,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: "./src/index.js",
     output: {
+        // path: path.resolve(__dirname, "dist"),
         filename: "main.js",
-        path: path.resolve(__dirname, "dist"),
-        publicPath: "./",
+        publicPath: "/",
         clean: true,
     },
+    mode: "development",
     resolve: {
         extensions: [".js"],
     },
@@ -37,6 +38,7 @@ module.exports = {
 	},
     plugins: [
         new HtmlWebpackPlugin({
+            inject: "body",
             template: "./src/index.html",
             filename: "./index.html"
         }),
@@ -46,13 +48,10 @@ module.exports = {
     ],
     devtool: "source-map",
     devServer: {
-		static: {
-			directory: path.join(__dirname, "dist"),
-			watch: true,
-		},
-		watchFiles: path.join(__dirname, "./**"),
 		compress: true,
 		historyApiFallback: true,
 		port: 3006,
+        host: "localhost",
+        hot: true,
 	},
 }

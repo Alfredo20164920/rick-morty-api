@@ -4,7 +4,7 @@
   "description": "SPA with webpack and using an API",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development",
+    "start": "webpack serve",
     "build": "webpack --mode production"
   },
   "keywords": [
