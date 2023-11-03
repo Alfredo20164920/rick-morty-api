@@ -13,7 +13,6 @@ module.exports = {
         publicPath: "./",
         clean: true,
     },
-    mode: "development",
     resolve: {
         extensions: [".js"],
     },
@@ -45,6 +44,7 @@ module.exports = {
             filename: "assets/styles/main.css"
         })
     ],
+    devtool: "source-map",
     devServer: {
 		static: {
 			directory: path.join(__dirname, "dist"),
