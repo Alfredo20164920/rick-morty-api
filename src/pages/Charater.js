@@ -7,12 +7,12 @@ const Character = async () => {
     const {name, image, episode, status, species, origin, location, gender} = await getData(id);
 
     const view = /*html*/`
-        <div class="Character-inner">
-            <article class="Character-card">
+        <div class="Characters-inner">
+            <article class="Characters-card">
                 <img src="${image}" alt="${name}" />
                 <h2>${name}</h2>
             </article>
-            <article class="Character-card">
+            <article class="Characters-card">
                 <h3>Episodes: ${episode.length} </h3>
                 <h3>Status: ${status}</h3>
                 <h3>Species:${species}</h3>
